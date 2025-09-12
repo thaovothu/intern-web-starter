@@ -67,8 +67,10 @@ const itemsPerPage = 10
 onMounted(async () => {
   try {
     const res = await axios.get('/api/v1/websites/categories/')
+    console.log('API response:', res.data)
     categories.value = Array.isArray(res.data) ? res.data : (res.data.results || [])
   } catch (e) {
+    console.error('Error fetching categories:', e)
     categories.value = []
   }
 })
