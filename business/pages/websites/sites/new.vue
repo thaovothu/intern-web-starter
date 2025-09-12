@@ -2,7 +2,7 @@
   <WebsiteSiteEditor
     :defaultData="{
         domain_name: null,
-        title: null,
+        title: { origin: null },
         description: null,
         keywords: null,
         icon: null,
@@ -15,6 +15,6 @@
 
 <script setup lang="ts">
 definePageMeta({
-layout: 'websites'
+  layout: 'websites'
 })
 </script>

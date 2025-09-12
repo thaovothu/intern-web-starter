@@ -1,1 +1,1 @@
-from .article_category import ArticleCategoryDocument
+# from .article_category import ArticleCategoryDocument

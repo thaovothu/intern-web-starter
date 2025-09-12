@@ -1,18 +1,53 @@
+# Python
 .venv
 venv
 *.pyc
-dist
-.env
+*.pyo
+__pycache__/
+*.pyd
+.Python
+*.sqlite3
+
+# Node / frontend
+node_modules/
+dist/
+.nuxt/
+output/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Docker
+docker-compose.override.yml
 /docker-compose.yml
-/demo
-docker.env
 /Dockerfile
-oidc.key
-debug.log
-.vscode
-serviceAccountKey.json
-/client-sites
+/docker/
 /docker/mysql
 /docker/rasa
 /docker/internsearch-data1
 /docker/internsearch-data2
+
+# Env / secrets
+.env
+docker.env
+oidc.key
+serviceAccountKey.json
+*.key
+*.pem
+*.crt
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.bak
+*.tmp
+*.orig
+
+# Mac
+.DS_Store
+
+# Client sites
+/client-sites
+/demo

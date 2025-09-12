@@ -114,7 +114,9 @@ CORS_ALLOWED_ORIGINS = env.list(
         f'http://{BUSINESS_HOST}',
         f'https://{BUSINESS_HOST}',
         f'http://{DOCS_HOST}',
-        f'https://{DOCS_HOST}'
+        f'https://{DOCS_HOST}',
+        "http://127.0.0.1:3008",
+        "http://localhost:3008",
     ],
 )
 if BUSINESS_FRONTEND_DEV_MODE:
@@ -130,10 +132,12 @@ CORS_EXPOSE_HEADERS = [
 
 ALLOWED_HOSTS = env.list(
     'DJANGO_ALLOWED_HOSTS',
-    default = [
+    default=[
         DEFAULT_HOST.split(':')[0],
         BUSINESS_HOST.split(':')[0],
         DOCS_HOST.split(':')[0],
+        'localhost',
+        '127.0.0.1',
         'host.docker.internal'
     ]
 )

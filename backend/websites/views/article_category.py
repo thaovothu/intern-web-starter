@@ -2,12 +2,12 @@ from base.views import AISearchViewSet, BaseViewSet
 
 from ..models import ArticleCategory
 from ..serializers import ArticleCategorySerializer
-from ..documents import ArticleCategoryDocument
+# from ..documents import ArticleCategoryDocument
 
 
 class ArticleCategoryViewSet(AISearchViewSet, BaseViewSet):
     queryset = ArticleCategory.objects.all()
-    document_class = ArticleCategoryDocument
+    # document_class = ArticleCategoryDocument
     search_map = {
         "name__origin": "icontains",
         "description": "icontains"
